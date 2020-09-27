@@ -7,9 +7,8 @@ class Solution(object):
         result = 0
         n = len(arr)
 
-        # For every item, count how many times it will show up in an odd length subarray then multiply it by the value
         for i, x in enumerate(arr):
-            result += (((i + 1) * (n - i) + 1) / 2) * x
+            result += (((i + 1) * (n - i) + 1) // 2) * x
         return result
 
 if __name__ == "__main__":
